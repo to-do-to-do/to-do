@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>60 Actions</title>
+  <style>
+		*{
+			padding:none;
+			margin:none;
+  		font-family: "Lucida Console", "Courier New", monospace;
+			user-select:none;
+			box-sizing: border-box;
+		}
+		html{
+			height:100%;
+		}
+		body{
+			height:100%;
+			background-color:magenta;
+		}
+		p{
+			color:MidnightBlue;
+		}
+		#commandbox{
+			font-size:2em;
+			position:fixed;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			width:50%;
+			height:50%;
+			background-color:yellow;
+			padding:60px;
+		}
+    #startbox{
+      font-size:2em;
+      position:fixed;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      width:50%;
+      height:50%;
+      background-color:clear;
+      padding:60px;
+      z-index:999;
+    }
+	</style>
+  <script src="script.js"></script>
+  <script src="verbsvb.js"></script>
+</head>
+<body id="body">
+  <div id="startbox">
+  </div>
+	<div id="commandbox">
+			<span id="command">
+				click to start
+			</span>
+	</div>
+</body>
+</html>
