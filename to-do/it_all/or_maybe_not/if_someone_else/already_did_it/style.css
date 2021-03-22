@@ -1,0 +1,30 @@
+*{
+  box-sizing: border-box;
+  padding:0px;
+  margin:0px;
+}
+html{
+  width:100%;
+}
+
+.slide{
+  width:100%;
+  /* margin-bottom: 100px; */
+  padding: 10%;
+}
+
+body{
+  background-color: yellow;
+  width:95%;
+  margin:auto;
+
+}
+#column1{
+  padding-top:100px;
+}
+.column{
+  vertical-align:top;
+  display:inline-block;
+  width:49.5%;
+  background-color: yellow;
+}
