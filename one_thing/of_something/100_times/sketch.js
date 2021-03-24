@@ -15,7 +15,7 @@ function setup() {
 	corn[0] = new obj(n);
 	noCursor();
 	textSize(30);
-	fill(100);
+	fill(250,180,10);
 }
 
 function draw(){
@@ -23,15 +23,16 @@ function draw(){
 	background(255);
 
 	if(n<100){
-		text(100-n,50,50);
 		corn[0].move();
+		for(i=0;i<corn.length;i++){
+			corn[i].display();
+		}
 	}else{
 		cursor();
-	}
-	for(i=0;i<corn.length;i++){
- 		corn[i].display();
+		noFill();
 	}
 
+	text(100-n,50,50);
 }
 
 function obj(N){
