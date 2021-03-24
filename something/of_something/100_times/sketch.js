@@ -24,15 +24,14 @@ function draw(){
 
 	if(n<100){
 		corn[0].move();
-		for(i=0;i<corn.length;i++){
-			corn[i].display();
-		}
 	}else{
 		cursor();
 		noFill();
 	}
-
 	text(100-n,50,50);
+	for(i=0;i<corn.length;i++){
+		corn[i].display();
+	}
 }
 
 function obj(N){
@@ -61,7 +60,7 @@ function obj(N){
 }
 
 function mousePressed(){
-	print(n);
+	//print(n);
 	n++;
 	if(n<100){
 		corn.unshift(new obj(n));
