@@ -33,9 +33,9 @@ function draw(){
         y:mouseY
       }
     );
-    // if(mouseP.length>=letter.length){
-    // //  mouseP.pop();
-    // }
+    if(mouseP.length>=1000){
+     mouseP.pop();
+    }
   }
 
   for(i=0;i<mouseP.length/6;i++){
