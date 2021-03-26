@@ -7,8 +7,8 @@
   <title>60_times</title>
   <style>
 		*{
-			padding:none;
-			margin:none;
+			padding:0px;
+			margin:0px;
   		font-family: "Lucida Console", "Courier New", monospace;
 			user-select:none;
 			box-sizing: border-box;
@@ -23,22 +23,12 @@
 		p{
 			color:MidnightBlue;
 		}
-		/* #commandbox{
-			font-size:2em;
-			position:fixed;
-			top:50%;
-			left:50%;
-			transform:translate(-50%,-50%);
-			width:50%;
-			height:50%;
-			background-color:lightblue;
-			padding:60px;
-      display:none;
-		} */
-    /* canvas{
+
+    canvas{
+      margin:none;
       position:fixed;
 
-    } */
+    }
     #startbox{
       font-size:2em;
       position:fixed;
@@ -48,7 +38,6 @@
       width:100%;
       height:100%;
       background-color:clear;
-      padding:60px;
       z-index:999;
     }
 	</style>
@@ -60,10 +49,5 @@
 <body id="body">
   <div id="startbox">
   </div>
-	<div id="commandbox">
-			<span id="command">
-				click
-			</span>
-	</div>
 </body>
 </html>

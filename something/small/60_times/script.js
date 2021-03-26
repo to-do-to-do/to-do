@@ -2,6 +2,7 @@
 let click = [];
 let count = 0;
 let started = false;
+let word = "click";
 
 function loadSounds(){
 	for(i=0;i<28;i++){
@@ -15,37 +16,26 @@ window.onload = ()=>{
 	startbox.addEventListener("click",start);
 }
 function start(){
-		started = true;
 		document.getElementById("startbox").setAttribute("style","display:none;");
-		//document.getElementById("commandbox").setAttribute("style","display:none;");
 		countDown();
 }
 
 function countDown(){
 	count++;
-	let command = document.getElementById("command");
-	let random = Math.floor(Math.random()*VERBSVB.length);
-	let text = "click";
-
 	if(count<4){
-		text = 4-count;
+		word = 4-count;
 	}else if(count>=4){
-		text = VERBSVB[random];
+		word = VERBSVB[Math.floor(Math.random()*VERBSVB.length)];
 		click[Math.floor(Math.random()*click.length)].play();
 	}
-
-	command.innerText = text;
 
 	if(count<64){
 		setTimeout(countDown,1000);
 	}else{
-		// command.innerText = "finished!";
 		count = 0;
-		started=false;
 		setTimeout(()=>{
-			command.innerText = "click";
+			word = "click";
 			document.getElementById("startbox").setAttribute("style","display:block;");
-			//document.getElementById("commandbox").setAttribute("style","display:block;");
 		},3000);
 	}
 }
@@ -64,6 +54,6 @@ function draw(){
 	if(count>=4){
 		rotate((6*(count-4)));
 	}
-	text(command.innerText,-height/3,0);
-	line(0,4,-height/3,4);
+	text(word,-height/3,0);
+	line(0,0,-height/3+2,0);
 }
