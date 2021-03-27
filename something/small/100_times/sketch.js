@@ -14,7 +14,7 @@ function preload(){
 function setup() {
 	createCanvas(windowWidth,windowHeight);
 	corn[0] = new obj(n);
-	// noCursor();
+	noCursor();
 	textSize(30);
 	fill(250,180,10);
 	if(width<height){
