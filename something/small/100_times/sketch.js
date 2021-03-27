@@ -14,7 +14,7 @@ function preload(){
 function setup() {
 	createCanvas(windowWidth,windowHeight);
 	corn[0] = new obj(n);
-	noCursor();
+	// noCursor();
 	textSize(30);
 	fill(250,180,10);
 	if(width<height){
@@ -30,12 +30,15 @@ function draw(){
 
 	if(n<100){
 		if(width<height){
-			corn[0].move(width*0.1,height*0.1);
+			if(n===0){
+				text("popcorn",width/2-50,height/2);
+			}
+			 corn[0].move(-100,-100);
 		}else{
 			corn[0].move(mouseX,mouseY);
 		}
 	}else{
-		cursor();
+	  cursor();
 		noFill();
 	}
 	for(i=0;i<corn.length;i++){
@@ -72,11 +75,13 @@ function obj(N){
 function mousePressed(){
 	//print(n);
 	if(width<height){
-		n++;
-		if(n<100){
-			corn[0].x = mouseX;
-			corn[0].y = mouseY;
-			corn.unshift(new obj(n));
+		if(mouseX>width*0.1 && mouseY>height*0.1){
+			n++;
+			if(n<100){
+				corn[0].x = mouseX;
+				corn[0].y = mouseY;
+				corn.unshift(new obj(n));
+			}
 		}
 	}else{
 		n++;
