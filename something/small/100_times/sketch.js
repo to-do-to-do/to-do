@@ -31,7 +31,7 @@ function draw(){
 	if(n<100){
 		if(width<height){
 			if(n===0){
-				text("popcorn",width/2-50,height/2);
+				text("pop",width/2-20,height/2);
 			}
 			 corn[0].move(-100,-100);
 		}else{
