@@ -12,7 +12,10 @@ planets.push(new planet("Saturn",1434,"yellow","black"));
 planets.push(new planet("Uranus",2871,"aqua","black"));
 planets.push(new planet("Neptune",4495,"white","black"));
 
-window.setInterval(newLine,100);
+window.setTimeout(()=>{
+	window.setInterval(newLine,100);
+},3000);
+
 
 function newLine(){
 	if(km<5000){
