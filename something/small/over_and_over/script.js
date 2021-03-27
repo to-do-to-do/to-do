@@ -43,6 +43,20 @@ function draw(){
   }
 }
 
+function touchStarted(){
+  return false;
+}
+
+function mouseDragged(){
+  return false;
+}
+
+function touchMoved(){
+  return false;
+}
+
+
+
 
 
 // let letter = [];

@@ -3,6 +3,7 @@ let click = [];
 let count = 0;
 let started = false;
 let word = "click";
+let length;
 
 function loadSounds(){
 	for(i=0;i<28;i++){
@@ -46,6 +47,11 @@ function setup(){
 	stroke(255,0,255);
 	fill(255,0,255);
 	textSize(20);
+	if(width>height){
+		length = height*0.3;
+	}else{
+		length = width*0.45;
+	}
 }
 
 function draw(){
@@ -54,6 +60,6 @@ function draw(){
 	if(count>=4){
 		rotate((6*(count-4)));
 	}
-	text(word,-height/3,0);
-	line(0,0,-height/3+2,0);
+	text(word,-length,0);
+	line(0,0,-length+2,0);
 }

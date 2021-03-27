@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>how_far</title>
-  <link rel="icon" type="image/png" href="/favicon.png"/>
+  <link rel="icon" type="image/ico" href="/favicon.ico"/>
   <style>
 		*{
 			padding:none;
@@ -16,6 +16,7 @@
 		}
 		body{
 			background-color:MidnightBlue;
+      padding-top:100px;
 			width:100em;
 		}
 		span{
@@ -23,10 +24,14 @@
 		}
 		#sun{
       display:inline-block;
-      margin-top:100px;
       background-color:yellow;
       color:red;
 		}
+  @media only screen and (max-width: 768px){ /*mobile */
+    body{
+			font-size:0.3em;
+		}
+  }
 	</style>
   <script src="script.js"></script>
 </head>

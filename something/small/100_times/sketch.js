@@ -1,6 +1,7 @@
 
 let popcorn = [];
 let corn = [];
+let scale;
 
 let n = 0;
 
@@ -16,6 +17,11 @@ function setup() {
 	noCursor();
 	textSize(30);
 	fill(250,180,10);
+	if(width<height){
+		scale = 0.1;
+	}else{
+		scale = 0.2;
+	}
 }
 
 function draw(){
@@ -23,15 +29,19 @@ function draw(){
 	background(255);
 
 	if(n<100){
-		corn[0].move();
+		if(width<height){
+			corn[0].move(width*0.1,height*0.1);
+		}else{
+			corn[0].move(mouseX,mouseY);
+		}
 	}else{
 		cursor();
 		noFill();
 	}
-	text(100-n,50,50);
 	for(i=0;i<corn.length;i++){
 		corn[i].display();
 	}
+	text(100-n,width*0.05,height*0.05);
 }
 
 function obj(N){
@@ -48,21 +58,30 @@ function obj(N){
 		translate(this.x,this.y);
 		rotate(this.r);
 
-		image(popcorn[this.p],-popcorn[this.p].width*0.1,-popcorn[this.p].height*0.1,popcorn[this.p].height*0.2,popcorn[this.p].height*0.2);
+		image(popcorn[this.p],-popcorn[this.p].width*0.5*scale,-popcorn[this.p].height*0.5*scale,popcorn[this.p].height*scale,popcorn[this.p].height*scale);
 		pop();
 	}
 
-	this.move = ()=>{
-		this.x = mouseX;
-		this.y = mouseY;
+	this.move = (X,Y)=>{
+		this.x = X;
+		this.y = Y;
 		this.r = frameCount*0.01;
 	}
 }
 
 function mousePressed(){
 	//print(n);
-	n++;
-	if(n<100){
-		corn.unshift(new obj(n));
+	if(width<height){
+		n++;
+		if(n<100){
+			corn[0].x = mouseX;
+			corn[0].y = mouseY;
+			corn.unshift(new obj(n));
+		}
+	}else{
+		n++;
+		if(n<100){
+			corn.unshift(new obj(n));
+		}
 	}
 }

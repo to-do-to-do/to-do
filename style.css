@@ -1,0 +1,40 @@
+
+
+*{
+  font-family: "Lucida Console", "Courier New", monospace;
+  user-select: none;
+}
+
+@media only screen and (min-width: 768px){ /*desktop */
+  body{
+    width:50%;
+    padding-top:15%;
+    margin:auto;
+  }
+}
+
+@media only screen and (max-width: 768px){ /*mobile */
+  body{
+    width:50%;
+    padding-top:15%;
+    margin-left:5%;
+  }
+}
+
+div{
+  margin-left:2em;
+  display:none;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+a:visited{
+  color:grey;
+}
+a:hover{
+  color:lightgreen;
+}
+span:hover{
+  color:cornflowerblue;
+}
