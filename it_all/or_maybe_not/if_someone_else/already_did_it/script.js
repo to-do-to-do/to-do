@@ -1,4 +1,4 @@
-let imgs = 110;
+let imgs = 113;
 let num = [];
 for(i=0;i<imgs;i++){
   num.push(i);

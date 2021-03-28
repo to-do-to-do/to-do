@@ -3,7 +3,6 @@
 *{
   font-family: "Lucida Console", "Courier New", monospace;
   user-select: none;
-  font-size:1em;
   line-height: 1.2em;
   box-sizing:border-box;
   margin:0px;
@@ -16,6 +15,7 @@
     width:100%;
     padding-top:15%;
     padding-left:20%;
+    font-size:1em;
   }
   a{
     text-decoration: none;
@@ -31,7 +31,8 @@
   body{
     width:100%;
     padding-top:15%;
-    padding-left:2%;
+    padding-left:1%;
+    font-size:1em;
   }
   a{
     text-decoration: none;
