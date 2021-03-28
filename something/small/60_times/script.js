@@ -18,6 +18,7 @@ window.onload = ()=>{
 }
 function start(){
 		document.getElementById("startbox").setAttribute("style","display:none;");
+		noCursor();
 		countDown();
 }
 
@@ -36,6 +37,7 @@ function countDown(){
 		count = 0;
 		setTimeout(()=>{
 			word = "click";
+			cursor();
 			document.getElementById("startbox").setAttribute("style","display:block;");
 		},3000);
 	}
