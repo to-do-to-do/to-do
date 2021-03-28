@@ -3,6 +3,8 @@
 *{
   font-family: "Lucida Console", "Courier New", monospace;
   user-select: none;
+  font-size:1em;
+  line-height: 1.75em;
 }
 
 @media only screen and (min-width: 768px){ /*desktop */
@@ -20,6 +22,9 @@
     margin-left:5%;
   }
 }
+.folder{
+  width:20px;
+}
 
 div{
   margin-left:2em;
@@ -28,6 +33,7 @@ div{
 a{
   text-decoration: none;
   color:black;
+  padding-left:20px;
 }
 a:visited{
   color:grey;
@@ -36,5 +42,5 @@ a:hover{
   color:lightgreen;
 }
 span:hover{
-  color:cornflowerblue;
+  /* color:cornflowerblue; */
 }
