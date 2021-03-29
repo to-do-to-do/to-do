@@ -6,7 +6,7 @@ var km = 0;
 planets.push(new planet("Mercury",58,"red","black"));
 planets.push(new planet(" Venus ",108,"orange","black"));
 planets.push(new planet(" Earth ",150,"lightgreen","black"));
-planets.push(new planet(" Mars .",228,"red","black"));
+planets.push(new planet(" Mars ",228,"red","black"));
 planets.push(new planet("Jupiter",779,"pink","black"));
 planets.push(new planet("Saturn ",1434,"yellow","black"));
 planets.push(new planet("Uranus ",2871,"aqua","black"));
