@@ -15,14 +15,25 @@ body{
   overflow:hidden;
   cursor: cell;
 }
-#backgroundimage {
-  width:100%;
-  height:100%;
-  position:fixed;
-  z-index: -10;
-}
+
 #poem{
 
+}
+
+@media only screen and (min-width: 768px){ /*desktop */
+	#backgroundimage {
+		width:100%;
+		height:100%;
+		position:fixed;
+		z-index: -10;
+	}
+}
+@media only screen and (max-width: 768px){ /*mobile */
+	#backgroundimage {
+		height:100%;
+		position:fixed;
+		z-index: -10;
+	}
 }
 
 #outputwrapper {
