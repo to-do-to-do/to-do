@@ -1,4 +1,4 @@
-let imgs = 116;
+let imgs = 117;
 let num = [];
 for(i=0;i<imgs;i++){
   num.push(i);
@@ -12,7 +12,8 @@ window.onload = ()=>{
     img.setAttribute("src","assets/"+k+".jpg");
     img.setAttribute("alt","image"+i);
     img.setAttribute("class","slide");
-    img.setAttribute("width","400");
+		console.log(i);
+//     img.setAttribute("width","400");
     if(i%2==0){
       document.getElementById("column1").appendChild(img);
     }else{
