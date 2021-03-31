@@ -19,6 +19,9 @@ function setup(){
 
 function draw(){
   background(255);
+  if(mouseP.length==1){
+    text("o",width/2,height/2);
+  }
   let diff_x = mouseP[0].x-mouseX;
   let diff_y = mouseP[0].y-mouseY;
 //  print(diff_y);

@@ -20,7 +20,7 @@ function setup() {
 	if(width<height){
 		scale = 0.1;
 	}else{
-		scale = 0.2;
+		scale = 0.15;
 	}
 }
 
